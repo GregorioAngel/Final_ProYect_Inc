@@ -3,7 +3,7 @@ import json
 
 class Review:
     def __init__(self):
-        #self.id = None
+        self.id = None
         self.id_destino = None
         self.id_usuario = None
         self.id_calificacion = None
@@ -11,7 +11,7 @@ class Review:
         self.animo = None
 
     def Ingresar_informacion(self):
-        #self.id = ""
+        self.id = int(entry_id.get())
         self.id_destino = int(entry_destino.get())
         self.id_usuario = int(entry_usuario.get())
         self.id_calificacion = int(entry_calificacion.get())
@@ -54,38 +54,43 @@ root = tk.Tk()
 root.title("Sección de Reviews")
 
 # Etiquetas y campos de entrada
+label_id = tk.Label(root, text="Ingrese su ID de usuario:")
+label_id.grid(row=0, column=0, padx=5, pady=5)
+entry_id = tk.Entry(root)
+entry_id.grid(row=0, column=1, padx=5, pady=5)
+
 label_destino = tk.Label(root, text="Ingrese el ID del destino:")
-label_destino.grid(row=0, column=0, padx=5, pady=5)
+label_destino.grid(row=1, column=0, padx=5, pady=5)
 entry_destino = tk.Entry(root)
-entry_destino.grid(row=0, column=1, padx=5, pady=5)
+entry_destino.grid(row=1, column=1, padx=5, pady=5)
 
 label_usuario = tk.Label(root, text="Ingrese su ID de usuario:")
-label_usuario.grid(row=1, column=0, padx=5, pady=5)
+label_usuario.grid(row=2, column=0, padx=5, pady=5)
 entry_usuario = tk.Entry(root)
-entry_usuario.grid(row=1, column=1, padx=5, pady=5)
+entry_usuario.grid(row=2, column=1, padx=5, pady=5)
 
 label_calificacion = tk.Label(root, text="Ingrese su calificación:")
-label_calificacion.grid(row=2, column=0, padx=5, pady=5)
+label_calificacion.grid(row=3, column=0, padx=5, pady=5)
 entry_calificacion = tk.Entry(root)
-entry_calificacion.grid(row=2, column=1, padx=5, pady=5)
+entry_calificacion.grid(row=3, column=1, padx=5, pady=5)
 
 label_comentario = tk.Label(root, text="Ingrese un comentario:")
-label_comentario.grid(row=3, column=0, padx=5, pady=5)
+label_comentario.grid(row=4, column=0, padx=5, pady=5)
 entry_comentario = tk.Entry(root)
-entry_comentario.grid(row=3, column=1, padx=5, pady=5)
+entry_comentario.grid(row=4, column=1, padx=5, pady=5)
 
 label_animo = tk.Label(root, text="Ingrese su estado de ánimo:")
-label_animo.grid(row=4, column=0, padx=5, pady=5)
+label_animo.grid(row=5, column=0, padx=5, pady=5)
 entry_animo = tk.Entry(root)
-entry_animo.grid(row=4, column=1, padx=5, pady=5)
+entry_animo.grid(row=5, column=1, padx=5, pady=5)
 
 # Botón para guardar los datos
-save_button = tk.Button(root, text="Guardar", command=guardar_json)
-save_button.grid(row=5, column=0, columnspan=2, padx=5, pady=10)
+save_button = tk.Button(root, text="Publicar", command=guardar_json)
+save_button.grid(row=6, column=0, columnspan=2, padx=5, pady=10)
 
 # Texto para mostrar la información ingresada
 info_text = tk.StringVar()
 info_label = tk.Label(root, textvariable=info_text)
-info_label.grid(row=6, column=0, columnspan=2, padx=5, pady=5)
+info_label.grid(row=7, column=0, columnspan=2, padx=5, pady=5)
 
 root.mainloop()
