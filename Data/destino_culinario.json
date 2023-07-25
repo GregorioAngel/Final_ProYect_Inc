@@ -1,0 +1,16 @@
+{
+    "Nombre": "asdasd",
+    "Tipo de cocina": "asdasd",
+    "Ingredientes": [
+        "sad",
+        "asda",
+        "asdas"
+    ],
+    "Precio minimo": 123.0,
+    "Precio maximo": 165165.0,
+    "Popularidad": 10.0,
+    "Disponibilidad": "Disponible",
+    "ID de la ubicacion": 1561,
+    "Imagen": "asdasd"
+}
+
