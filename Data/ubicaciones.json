@@ -1,0 +1,86 @@
+[
+    {
+        "id" : 1,
+        "latitud": -24.7761,
+        "longitud": -65.4093,
+        "direccion": "O'Higgins 575",
+        "nombre": "El Buen Gusto",
+        "tipo_cocina" : "tipo_cocina",
+        "ingredientes" : "ingredientes",
+        "precio_minimo" : "precio_minimo",
+        "precio_maximo" : "precio_maximo",
+        "popularidad" : "popularidad",
+        "disponibilidad" : "disponibilidad",
+        "imagen": "imagen"
+
+    },
+    {
+        "id" : 2,
+        "latitud": -24.7778,
+        "longitud": -65.4114,
+        "direccion": "Balcarce 999",
+        "nombre": "nombre",
+        "tipo_cocina" : "tipo_cocina",
+        "ingredientes" : "ingredientes",
+        "precio_minimo" : "precio_minimo",
+        "precio_maximo" : "precio_maximo",
+        "popularidad" : "popularidad",
+        "disponibilidad" : "disponibilidad",
+        "imagen": "imagen"
+    },
+    {
+        "id" : 3,
+        "latitud": -24.7746,
+        "longitud": -65.4117,
+        "direccion": "12 de Octubre 756",
+        "nombre": "nombre",
+        "tipo_cocina" : "tipo_cocina",
+        "ingredientes" : "ingredientes",
+        "precio_minimo" : "precio_minimo",
+        "precio_maximo" : "precio_maximo",
+        "popularidad" : "popularidad",
+        "disponibilidad" : "disponibilidad",
+        "imagen": "imagen"
+    },
+    {
+        "id" : 4,
+        "latitud": -24.7763,
+        "longitud": -65.4096,
+        "direccion": "Bartolomé Mitre 1086",
+        "nombre": "nombre",
+        "tipo_cocina" : "tipo_cocina",
+        "ingredientes" : "ingredientes",
+        "precio_minimo" : "precio_minimo",
+        "precio_maximo" : "precio_maximo",
+        "popularidad" : "popularidad",
+        "disponibilidad" : "disponibilidad",
+        "imagen": "imagen"
+    },
+    {
+        "id" : 5,
+        "latitud": -24.7750,
+        "longitud": -65.4092,
+        "direccion": "12 de Octubre 581",
+        "nombre": "nombre",
+        "tipo_cocina" : "tipo_cocina",
+        "ingredientes" : "ingredientes",
+        "precio_minimo" : "precio_minimo",
+        "precio_maximo" : "precio_maximo",
+        "popularidad" : "popularidad",
+        "disponibilidad" : "disponibilidad",
+        "imagen": "imagen"
+    },
+    {
+        "id" : 6,
+        "latitud": -24.7758,
+        "longitud": -65.4138,
+        "direccion": "O'Higgins 903", "nombre": "nombre",
+        "tipo_cocina" : "tipo_cocina",
+        "ingredientes" : "ingredientes",
+        "precio_minimo" : "precio_minimo",
+        "precio_maximo" : "precio_maximo",
+        "popularidad" : "popularidad",
+        "disponibilidad" : "disponibilidad",
+        "imagen": "imagen"
+    }
+]
