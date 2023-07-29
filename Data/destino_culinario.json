@@ -1,0 +1,18 @@
+{
+    "ID": 12,
+    "Latitud": "asdasdasdasd",
+    "Longitud": "dasdasdasd",
+    "Direccion": "asdasdasdasd",
+    "Nombre": "asdasdasdasd",
+    "Tipo de cocina": "asdasdasdsa",
+    "Ingredientes": [
+        "asd",
+        "asd",
+        "asd"
+    ],
+    "Precio minimo": 132.0,
+    "Precio maximo": 861861.0,
+    "Popularidad": 5.0,
+    "Disponibilidad": "No disponible",
+    "Imagen": "asdasdasd"
+}

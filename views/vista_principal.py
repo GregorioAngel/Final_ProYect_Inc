@@ -1,3 +1,4 @@
+#vista principal.py
 import tkinter as tk
 #from tkinter import ttk
 from tkintermapview import TkinterMapView

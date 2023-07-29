@@ -1,13 +1,14 @@
+#controlador principal.py
 from views.vista_principal import VistaPrincipal
 from models.local import Local
-from models.DestinoCulinario import DestinoCulinario
+from models.ubicacion_culinaria import Ubicacion_Culinaria
 from PIL import Image, ImageTk
 
 class ControladorPrincipal:
     def __init__(self, root):
         self.vista = VistaPrincipal(root, self.seleccionar_local, seleccionar_DestinoCulinario)
         self.locales = Local.cargar_locales("data/locales.json")
-        self.ubicaciones = DestinoCulinario.cargar_ubicaciones("data/ubicaciones.json")
+        self.ubicaciones = Ubicacion_Culinaria.cargar_ubicaciones("data/ubicaciones.json")
         self.marcadores = []
         self.imagenes = []
 
