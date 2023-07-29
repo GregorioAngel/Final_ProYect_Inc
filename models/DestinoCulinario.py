@@ -48,34 +48,37 @@ class DestinoCulinario:
 
     def guardar_datos(self):
         datos = {
-            "ID": self.id,
-            "Latitud": self.latitud,
-            "Longitud": self.longitud,
-            "Direccion": self.direccion,
-            "Nombre": self.nombre,
-            "Tipo de cocina": self.tipo_cocina,
-            "Ingredientes": self.ingredientes,
-            "Precio minimo": self.precio_minimo,
-            "Precio maximo": self.precio_maximo,
-            "Popularidad": self.popularidad,
-            "Disponibilidad": 'Disponible' if self.disponibilidad else 'No disponible',
-            "Imagen": self.imagen,
+            "id": int(self.id),
+            "latitud": float(self.latitud),
+            "longitud": float(self.longitud),
+            "direccion": self.direccion,
+            "nombre": self.nombre,
+            "tipo_cocina": self.tipo_cocina,
+            "ingredientes": self.ingredientes,
+            "precio_minimo": self.precio_minimo,
+            "precio_maximo": self.precio_maximo,
+            "popularidad": self.popularidad,
+            "disponibilidad": 'Disponible' if self.disponibilidad else 'No disponible',
+            "imagen": "image_3.png",
         }
+        # Modificacion de ingreso de Json
         #Guarda los datos en ubicaciones.json
-        file_path = r'F:\Cosas\Cristian\Microsoft VS Code Trabajos\Proyecto-Final-Python\Final_ProYect_Inc\Data\ubicaciones.json'
+        #file_path = r'F:\Cosas\Cristian\Microsoft VS Code Trabajos\Proyecto-Final-Python\Final_ProYect_Inc\Data\ubicaciones.json'
 
-        if os.path.exists(file_path):
-            with open(file_path, 'r') as file:
+        #if os.path.exists(file_path):
+        if os.path.exists("data/ubicaciones.json"):     
+            with open("data/ubicaciones.json", 'r') as file:
                 data = json.load(file)
         else:
             data = []
 
         data.append(datos)
 
-        with open(file_path, 'w') as file:
-            json.dump(data, file, indent=4)
+        #with open(file_path, 'w') as file:
+        with open("data/ubicaciones.json", 'w') as file:
+             json.dump(data, file, indent=4)
 
-
+        
         # Guarda los datos en local.json
         # file_path_2 = r'F:\Cosas\Cristian\Microsoft VS Code Trabajos\Proyecto-Final-Python\Final_ProYect_Inc\Data\locales.json'
 

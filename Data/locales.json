@@ -28,5 +28,15 @@
         "nombre": "Pizza Mara",
         "imagen": "image_6.png",
         "id_DestinoCulinario": 6
+    },
+    {
+        "nombre": "La loma",
+        "imagen": "image_6.png",
+        "id_DestinoCulinario": 7
+    },
+    {
+        "nombre": "UTGHRA",
+        "imagen": "image_3.png",
+        "id_DestinoCulinario": "8"
     }
 ]

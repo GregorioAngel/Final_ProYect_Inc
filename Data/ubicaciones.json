@@ -82,5 +82,41 @@
         "popularidad": "popularidad",
         "disponibilidad": "disponibilidad",
         "imagen": "imagen"
+    },
+    {
+        "id": 7,
+        "latitud": -24.7763982,
+        "longitud": -65.4055584,
+        "direccion": "Puerredon 800",
+        "nombre": "La loma",
+        "tipo_cocina": "china",
+        "ingredientes": [
+            "soju",
+            "camaron",
+            "tofu"
+        ],
+        "precio_minimo": 100.0,
+        "precio_maximo": 1000.0,
+        "popularidad": 2.0,
+        "disponibilidad": "No disponible",
+        "imagen": ""
+    },
+    {
+        "id": 8,
+        "latitud": -24.7815025,
+        "longitud": -65.4116095,
+        "direccion": "Balcarse y Entre Rios",
+        "nombre": "UTGHRA",
+        "tipo_cocina": "Variada",
+        "ingredientes": [
+            "Especies",
+            " Salsas ",
+            " Pastas"
+        ],
+        "precio_minimo": 1000.0,
+        "precio_maximo": 10000.0,
+        "popularidad": 3.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
     }
 ]

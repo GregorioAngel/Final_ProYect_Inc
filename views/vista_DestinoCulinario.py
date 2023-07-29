@@ -99,8 +99,8 @@ class VisitasCulinarias:
 
         # Solo obtenemos los campos necesarios del formulario
         nombre = self.entry_nombre.get()
-        imagen = self.entry_imagen.get()
-        id_destino = id(self.entry_id.get())
+        imagen = "image_3.png" #self.entry_imagen.get()
+        id_destino = self.entry_id.get()
 
         # Creamos un objeto Local con los datos capturados
         local = Local(nombre, imagen, id_destino)
@@ -113,7 +113,6 @@ class VisitasCulinarias:
 
         with open("data/locales.json", "w") as archivo:
             json.dump(datos_locales, archivo, indent=4)
-
 
         self.destino_1.Ingresar_informacion(
             self.entry_id.get(),
