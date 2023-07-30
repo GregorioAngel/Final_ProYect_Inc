@@ -4,6 +4,7 @@ from PIL import Image, ImageTk
 from controller.controlador_principal import ControladorPrincipal
 from views.vista_DestinoCulinario import VisitasCulinarias
 
+
 def abrir_ventana_visitas_culinarias():
     formulario = VisitasCulinarias()
 
