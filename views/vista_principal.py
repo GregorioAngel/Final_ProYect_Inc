@@ -48,7 +48,7 @@ class VistaPrincipal:
 
         # Placeholder para el mapa
         self.mapa = TkinterMapView(self.frame_mapa, width=600, height=600, corner_radius=0)
-        self.mapa.set_position(-24.77616437851034, -65.41079411004006)
+        self.mapa.set_position(-24.7858636034, -65.408408504006)  
         self.mapa.set_zoom(16)
         self.mapa.pack(side='right')
 

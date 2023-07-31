@@ -4,6 +4,9 @@ import tkinter as tk
 from tkinter import messagebox
 from models.DestinoCulinario import DestinoCulinario
 from models.local import Local
+from models.ubicacion_culinaria import Ubicacion_Culinaria
+from controller.controlador_principal import ControladorPrincipal
+from views.vista_principal import VistaPrincipal
 
 class VisitasCulinarias:
     def __init__(self):
@@ -100,7 +103,7 @@ class VisitasCulinarias:
         # Solo obtenemos los campos necesarios del formulario
         nombre = self.entry_nombre.get()
         imagen = "image_3.png" #self.entry_imagen.get()
-        id_destino = self.entry_id.get()
+        id_destino = int(self.entry_id.get())
 
         # Creamos un objeto Local con los datos capturados
         local = Local(nombre, imagen, id_destino)
@@ -131,8 +134,20 @@ class VisitasCulinarias:
 
         self.destino_1.guardar_datos()
         messagebox.showinfo("Guardado", "Los datos se han guardado correctamente.")
-        self.limpiar_campos()
+        ##################################################################################
+        #self.vista = VistaPrincipal(self.root, seleccionar_local_callback=None, seleccionar_DestinoCulinario_callback=None)
+        #self.locales = Local.cargar_locales("data/locales.json")
+        #self.ubicaciones = Ubicacion_Culinaria.cargar_ubicaciones("data/ubicaciones.json")
+        #self.marcadores = []
+        #self.imagenes = []
+        
+        #ControladorPrincipal.cargar_locales(self)
+        #ControladorPrincipal.cargar_imagenes(self)
+        #ControladorPrincipal.cargar_marcadores(self)
 
+        ################################################################################  
+        self.limpiar_campos()
+        self.root.destroy()
     def limpiar_campos(self):
         self.entry_id.delete(0, tk.END)
         self.entry_latitud.delete(0, tk.END)
