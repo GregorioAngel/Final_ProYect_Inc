@@ -1,0 +1,43 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Festival de la Empanada Salteña",
+        "id_DestinoCulinario" : 1 ,
+        "hora_inicio" : "2023-07-29T15:30:00"
+    },
+
+    {
+        "id" : 2,
+        "nombre" : "Festival doma y folkclore",
+        "id_DestinoCulinario" : 2 ,
+        "hora_inicio" : "2023-07-29T16:00:00"
+    },
+
+    {
+        "id" : 3,
+        "nombre" : "Pachamama",
+        "id_DestinoCulinario" : 3 ,
+        "hora_inicio" : "2023-07-29T13:30:00"
+    },
+
+    {
+        "id" : 4,
+        "nombre" : "Festival del Tamal",
+        "id_DestinoCulinario" : 4 ,
+        "hora_inicio" : "2023-07-29T12:00:00"
+    },
+
+    {
+        "id" : 5,
+        "nombre" : "Festival al heroe Gaucho",
+        "id_DestinoCulinario" : 5 ,
+        "hora_inicio" : "2023-07-29T21:30:00"
+    },
+
+    {
+        "id" : 6,
+        "nombre" : "Festival de la Chicha",
+        "id_DestinoCulinario" : 6 ,
+        "hora_inicio" : "2023-07-29T23:00:00"
+    }
+]
