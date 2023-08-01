@@ -1,86 +1,141 @@
 [
     {
-        "id" : 1,
-        "latitud": -24.7761,
-        "longitud": -65.4093,
-        "direccion": "O'Higgins 575",
-        "nombre": "El Buen Gusto",
-        "tipo_cocina" : "tipo_cocina",
-        "ingredientes" : "ingredientes",
-        "precio_minimo" : "precio_minimo",
-        "precio_maximo" : "precio_maximo",
-        "popularidad" : "popularidad",
-        "disponibilidad" : "disponibilidad",
-        "imagen": "imagen"
-
+        "id": 1,
+        "latitud": -24.7763982,
+        "longitud": -65.4055584,
+        "direccion": "Puerredon 800",
+        "nombre": "La loma",
+        "tipo_cocina": "china",
+        "ingredientes": [
+            "soju",
+            "camaron",
+            "tofu"
+        ],
+        "precio_minimo": 100.0,
+        "precio_maximo": 1000.0,
+        "popularidad": 2.0,
+        "disponibilidad": "No disponible",
+        "imagen": ""
     },
     {
-        "id" : 2,
-        "latitud": -24.7778,
-        "longitud": -65.4114,
-        "direccion": "Balcarce 999",
-        "nombre": "nombre",
-        "tipo_cocina" : "tipo_cocina",
-        "ingredientes" : "ingredientes",
-        "precio_minimo" : "precio_minimo",
-        "precio_maximo" : "precio_maximo",
-        "popularidad" : "popularidad",
-        "disponibilidad" : "disponibilidad",
-        "imagen": "imagen"
+        "id": 2,
+        "latitud": -24.7815025,
+        "longitud": -65.4116095,
+        "direccion": "Balcarse y Entre Rios",
+        "nombre": "UTGHRA",
+        "tipo_cocina": "Variada",
+        "ingredientes": [
+            "Especies",
+            " Salsas ",
+            " Pastas"
+        ],
+        "precio_minimo": 1000.0,
+        "precio_maximo": 10000.0,
+        "popularidad": 3.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
     },
     {
-        "id" : 3,
-        "latitud": -24.7746,
-        "longitud": -65.4117,
-        "direccion": "12 de Octubre 756",
-        "nombre": "nombre",
-        "tipo_cocina" : "tipo_cocina",
-        "ingredientes" : "ingredientes",
-        "precio_minimo" : "precio_minimo",
-        "precio_maximo" : "precio_maximo",
-        "popularidad" : "popularidad",
-        "disponibilidad" : "disponibilidad",
-        "imagen": "imagen"
+        "id": 3,
+        "latitud": -24.7757747,
+        "longitud": -65.4155363,
+        "direccion": "Ohiggins 1100",
+        "nombre": "La Bodega",
+        "tipo_cocina": "Gurmet",
+        "ingredientes": [
+            "Pastas",
+            "Carnes",
+            "Tragos"
+        ],
+        "precio_minimo": 1000.0,
+        "precio_maximo": 10000.0,
+        "popularidad": 3.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
     },
     {
-        "id" : 4,
-        "latitud": -24.7763,
-        "longitud": -65.4096,
-        "direccion": "Bartolomé Mitre 1086",
-        "nombre": "nombre",
-        "tipo_cocina" : "tipo_cocina",
-        "ingredientes" : "ingredientes",
-        "precio_minimo" : "precio_minimo",
-        "precio_maximo" : "precio_maximo",
-        "popularidad" : "popularidad",
-        "disponibilidad" : "disponibilidad",
-        "imagen": "imagen"
+        "id": 4,
+        "latitud": -24.7899159,
+        "longitud": -65.409571,
+        "direccion": "Caseros 400",
+        "nombre": "Hotel Salta",
+        "tipo_cocina": "Continental",
+        "ingredientes": [
+            "Variedad",
+            "Meriendas"
+        ],
+        "precio_minimo": 500.0,
+        "precio_maximo": 5000.0,
+        "popularidad": 3.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
     },
     {
-        "id" : 5,
-        "latitud": -24.7750,
-        "longitud": -65.4092,
-        "direccion": "12 de Octubre 581",
-        "nombre": "nombre",
-        "tipo_cocina" : "tipo_cocina",
-        "ingredientes" : "ingredientes",
-        "precio_minimo" : "precio_minimo",
-        "precio_maximo" : "precio_maximo",
-        "popularidad" : "popularidad",
-        "disponibilidad" : "disponibilidad",
-        "imagen": "imagen"
+        "id": 5,
+        "latitud": -24.7902665,
+        "longitud": -65.4109443,
+        "direccion": "Peatonal Alberdi 30",
+        "nombre": "Mac Donal",
+        "tipo_cocina": "Sangucheria",
+        "ingredientes": [
+            "Hamburguesas",
+            "Papas"
+        ],
+        "precio_minimo": 800.0,
+        "precio_maximo": 2500.0,
+        "popularidad": 3.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
     },
     {
-        "id" : 6,
-        "latitud": -24.7758,
-        "longitud": -65.4138,
-        "direccion": "O'Higgins 903", "nombre": "nombre",
-        "tipo_cocina" : "tipo_cocina",
-        "ingredientes" : "ingredientes",
-        "precio_minimo" : "precio_minimo",
-        "precio_maximo" : "precio_maximo",
-        "popularidad" : "popularidad",
-        "disponibilidad" : "disponibilidad",
-        "imagen": "imagen"
+        "id": 6,
+        "latitud": -24.7876669,
+        "longitud": -65.4103528,
+        "direccion": "Belgrano 500",
+        "nombre": "Las Delicias",
+        "tipo_cocina": "Ejecutiva",
+        "ingredientes": [
+            "Carne",
+            "Pescado"
+        ],
+        "precio_minimo": 100.0,
+        "precio_maximo": 3000.0,
+        "popularidad": 5.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
+    },
+    {
+        "id": 7,
+        "latitud": -24.7880974,
+        "longitud": -65.4123445,
+        "direccion": "Balcarse 50",
+        "nombre": "Cafe Martinez",
+        "tipo_cocina": "Cafeteria",
+        "ingredientes": [
+            "Cafe",
+            " Delicias"
+        ],
+        "precio_minimo": 1000.0,
+        "precio_maximo": 5000.0,
+        "popularidad": 4.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
+    },
+    {
+        "id": 8,
+        "latitud": -24.7886691,
+        "longitud": -65.4090346,
+        "direccion": "Espa\u00f1a 350",
+        "nombre": "Parrilla Salta",
+        "tipo_cocina": "Asado",
+        "ingredientes": [
+            "Carne",
+            "Entra\u00f1as"
+        ],
+        "precio_minimo": 3000.0,
+        "precio_maximo": 10000.0,
+        "popularidad": 3.0,
+        "disponibilidad": "No disponible",
+        "imagen": "image_3.png"
     }
 ]

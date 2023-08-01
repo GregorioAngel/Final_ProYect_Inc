@@ -1,20 +1,25 @@
+#controlador principal.py
 from views.vista_principal import VistaPrincipal
 from models.local import Local
-from models.DestinoCulinario import DestinoCulinario
+from models.ubicacion_culinaria import Ubicacion_Culinaria
+from models.usuario import Usuario
 from PIL import Image, ImageTk
+
 
 class ControladorPrincipal:
     def __init__(self, root):
         self.vista = VistaPrincipal(root, self.seleccionar_local, seleccionar_DestinoCulinario)
         self.locales = Local.cargar_locales("data/locales.json")
-        self.ubicaciones = DestinoCulinario.cargar_ubicaciones("data/ubicaciones.json")
+        self.ubicaciones = Ubicacion_Culinaria.cargar_ubicaciones("data/ubicaciones.json")
         self.marcadores = []
         self.imagenes = []
+        nroubicaciones = len(self.ubicaciones) 
 
         self.cargar_locales()
         self.cargar_imagenes()
         self.cargar_marcadores()
-        
+        print(f"Nro de Ubicación {nroubicaciones}" )
+
     def cargar_locales(self):
         for local in self.locales:
             self.vista.agregar_local(local)
@@ -25,9 +30,9 @@ class ControladorPrincipal:
             self.imagenes.append(imagen)
 
     def cargar_marcadores(self):
-        for DestinoCulinario, local in zip(self.ubicaciones, self.locales):
-            imagen = self.imagenes[DestinoCulinario.id - 1]
-            marcador = self.vista.agregar_marcador_mapa(DestinoCulinario.latitud, DestinoCulinario.longitud, local.nombre, imagen)
+        for destinoCulinario, local in zip(self.ubicaciones, self.locales):
+            imagen = self.imagenes[destinoCulinario.id - 1]
+            marcador = self.vista.agregar_marcador_mapa(destinoCulinario.latitud, destinoCulinario.longitud, local.nombre, imagen)
             marcador.hide_image(True)
             self.marcadores.append(marcador)
 
@@ -37,18 +42,18 @@ class ControladorPrincipal:
         # Obtiene el local seleccionado
         local_seleccionado = self.locales[indice_seleccionado[0]]
         
-        DestinoCulinario_seleccionada = DestinoCulinario(0, 0, 0, "")
+        DestinoCulinario_seleccionada = Ubicacion_Culinaria(0, 0, 0,"","","","","","","","","")
         
         # Busca la ubicación correspondiente al local seleccionado
-        for DestinoCulinario in self.ubicaciones:
-            if DestinoCulinario.id == local_seleccionado.id_DestinoCulinario:
-                DestinoCulinario_seleccionada = DestinoCulinario
+        for destinoCulinario in self.ubicaciones:
+            if destinoCulinario.id == local_seleccionado.id_DestinoCulinario:
+                DestinoCulinario_seleccionada = destinoCulinario
                 break
         
         # Centra el mapa en la ubicación seleccionada
         self.vista.mapa.set_position(DestinoCulinario_seleccionada.latitud, DestinoCulinario_seleccionada.longitud)
 
-        print(f"Latitud: {DestinoCulinario_seleccionada.latitud}, Longitud: {DestinoCulinario_seleccionada.longitud}")
+        #print(f"Latitud: {DestinoCulinario_seleccionada.latitud}, Longitud: {DestinoCulinario_seleccionada.longitud}")
 
 def seleccionar_DestinoCulinario(marcador):
     if marcador.image_hidden is True:
