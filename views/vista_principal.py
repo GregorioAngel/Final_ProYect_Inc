@@ -19,7 +19,35 @@ class VistaPrincipal:
         titulo = tk.Label(self.frame_top, text="Food Travel", font=("Wide Latin", 20))
         titulo.pack(side='left', padx=20)
 
-        r_frame = tk.LabelFrame(self.frame_top, text="Ingrese Usuario")
+        self.frame_locales = tk.Frame(self.root, width=400, height=300)
+        self.frame_locales.pack(side='left', fill='both', expand=False, padx=10, pady=0)
+
+        self.frame_mapa = tk.Frame(self.root, width=600, height=600)
+        self.frame_mapa.pack(side='left')
+
+        # Placeholder para el mapa
+        self.mapa = TkinterMapView(self.frame_mapa, width=600, height=600, corner_radius=0)
+        self.mapa.set_position(-24.7858636034, -65.408408504006)  
+        self.mapa.set_zoom(16)
+        self.mapa.pack(side='right')
+
+        # Listbox para los locales
+        self.lista_locales = tk.Listbox(self.frame_locales)
+        self.lista_locales.bind('<<ListboxSelect>>', seleccionar_local_callback)
+        self.lista_locales.pack(fill='both', expand=True)
+
+    def agregar_local(self, local):
+        nombre = local.nombre
+        self.lista_locales.insert(tk.END, nombre)
+
+    def agregar_marcador_mapa(self, latitud, longitud, texto, imagen=None):
+        return self.mapa.set_marker(latitud, longitud, text=texto, image=imagen, command=self.seleccionar_DestinoCulinario_callback)
+
+
+
+
+
+"""        r_frame = tk.LabelFrame(self.frame_top, text="Ingrese Usuario")
         r_frame.pack(side='right', fill='y')
 
         # Crear un frame para agrupar los entrys y el botón horizontalmente
@@ -40,22 +68,6 @@ class VistaPrincipal:
         boton_ingresar = tk.Button(r_frame, text="   I n g r e s a r   " , command=self.guarda_usuario)
         boton_ingresar.pack(side='right', padx=30, pady=5)
 
-        self.frame_locales = tk.Frame(self.root, width=400, height=300)
-        self.frame_locales.pack(side='left', fill='both', expand=False, padx=10, pady=0)
-
-        self.frame_mapa = tk.Frame(self.root, width=600, height=600)
-        self.frame_mapa.pack(side='left')
-
-        # Placeholder para el mapa
-        self.mapa = TkinterMapView(self.frame_mapa, width=600, height=600, corner_radius=0)
-        self.mapa.set_position(-24.7858636034, -65.408408504006)  
-        self.mapa.set_zoom(16)
-        self.mapa.pack(side='right')
-
-        # Listbox para los locales
-        self.lista_locales = tk.Listbox(self.frame_locales)
-        self.lista_locales.bind('<<ListboxSelect>>', seleccionar_local_callback)
-        self.lista_locales.pack(fill='both', expand=True)
 
     def guarda_usuario(self):
         ##################################################
@@ -102,12 +114,6 @@ class VistaPrincipal:
         label_usuario.place(x=800, y=60)
      
     #####################################################
-
-    def agregar_local(self, local):
-        nombre = local.nombre
-        self.lista_locales.insert(tk.END, nombre)
-
-    def agregar_marcador_mapa(self, latitud, longitud, texto, imagen=None):
-        return self.mapa.set_marker(latitud, longitud, text=texto, image=imagen, command=self.seleccionar_DestinoCulinario_callback)
+"""
 
 

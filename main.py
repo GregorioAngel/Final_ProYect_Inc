@@ -3,8 +3,8 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from controller.controlador_principal import ControladorPrincipal
 from views.vista_DestinoCulinario import VisitasCulinarias
-
-
+import login as gui
+"""
 def abrir_ventana_visitas_culinarias():
     formulario = VisitasCulinarias()
 
@@ -31,3 +31,5 @@ boton_abrir_visitas_culinarias = tk.Button(frame_centro, text="Visitas Culinaria
 boton_abrir_visitas_culinarias.pack(pady=50)
 
 root.mainloop()
+"""
+ventana = gui.Login()
