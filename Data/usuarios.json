@@ -16,5 +16,12 @@
         "nombre": "Ivan",
         "apellido": "Patagua",
         "historial_ruta": []
+    },
+    {
+        "id": 4,
+        "nombre": "Diego",
+        "apellido": "Cejas",
+        "historial_ruta": []
     }
+
 ]

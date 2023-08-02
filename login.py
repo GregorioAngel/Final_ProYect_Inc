@@ -1,7 +1,6 @@
 #Importaciones
 import tkinter as tk
 import customtkinter as ctk
-import os
 from PIL import ImageTk, Image
 from models.usuario import Usuario
 from controller.controlador_principal import ControladorPrincipal
@@ -38,7 +37,7 @@ class Login:
 
         # Contraseña
         ctk.CTkLabel(self.root, text="Contraseña").pack()
-        self.contrasena = ctk.CTkEntry(self.root)
+        self.contrasena = ctk.CTkEntry(self.root, show="*")
         self.contrasena.insert(0, "*******")
         self.contrasena.bind("<Button-1>", lambda e: self.contrasena.delete(0, 'end'))
         self.contrasena.pack()
@@ -76,11 +75,13 @@ class Login:
                self.info_login.pack()
 
 class Ventana_Principal:
-
+   
      def __init__(self):
-        self.root = tk.Tk()
+        self.root = ctk.CTk()
         self.root.title("Food Travel")
         self.root.geometry("1100x700")
         self.root.iconbitmap("views/images/FT.ico")
+           
         controlador = ControladorPrincipal(self.root)
+   
         self.root.mainloop()

@@ -2,9 +2,7 @@
 from views.vista_principal import VistaPrincipal
 from models.local import Local
 from models.ubicacion_culinaria import Ubicacion_Culinaria
-from models.usuario import Usuario
 from PIL import Image, ImageTk
-
 
 class ControladorPrincipal:
     def __init__(self, root):
@@ -13,13 +11,12 @@ class ControladorPrincipal:
         self.ubicaciones = Ubicacion_Culinaria.cargar_ubicaciones("data/ubicaciones.json")
         self.marcadores = []
         self.imagenes = []
-        nroubicaciones = len(self.ubicaciones) 
+        #nroubicaciones = len(self.ubicaciones) 
 
         self.cargar_locales()
         self.cargar_imagenes()
         self.cargar_marcadores()
-        print(f"Nro de Ubicación {nroubicaciones}" )
-
+        #print(f"Nro de Ubicación {nroubicaciones}" )
             
     def cargar_locales(self):
         for local in self.locales:
@@ -54,11 +51,9 @@ class ControladorPrincipal:
         # Centra el mapa en la ubicación seleccionada
         self.vista.mapa.set_position(DestinoCulinario_seleccionada.latitud, DestinoCulinario_seleccionada.longitud)
 
-        #print(f"Latitud: {DestinoCulinario_seleccionada.latitud}, Longitud: {DestinoCulinario_seleccionada.longitud}")
-
 def seleccionar_DestinoCulinario(marcador):
     if marcador.image_hidden is True:
         marcador.hide_image(False)
     else:
         marcador.hide_image(True)
-    print("Ubicación seleccionada: ", marcador.text)
+    #print("Ubicación seleccionada: ", marcador.text)

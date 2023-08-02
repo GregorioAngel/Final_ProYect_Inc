@@ -1,12 +1,10 @@
 #Vista_DestinoCulinario.py
 import json
 import tkinter as tk
+import customtkinter as ctk
 from tkinter import messagebox
 from models.DestinoCulinario import DestinoCulinario
 from models.local import Local
-#from models.ubicacion_culinaria import Ubicacion_Culinaria
-#from controller.controlador_principal import ControladorPrincipal
-#from views.vista_principal import VistaPrincipal
 
 class VisitasCulinarias:
     def __init__(self):
@@ -134,18 +132,6 @@ class VisitasCulinarias:
 
         self.destino_1.guardar_datos()
         messagebox.showinfo("Guardado", "Los datos se han guardado correctamente.")
-        ##################################################################################
-        #self.vista = VistaPrincipal(self.root, seleccionar_local_callback=None, seleccionar_DestinoCulinario_callback=None)
-        #self.locales = Local.cargar_locales("data/locales.json")
-        #self.ubicaciones = Ubicacion_Culinaria.cargar_ubicaciones("data/ubicaciones.json")
-        #self.marcadores = []
-        #self.imagenes = []
-        
-        #ControladorPrincipal.cargar_locales(self)
-        #ControladorPrincipal.cargar_imagenes(self)
-        #ControladorPrincipal.cargar_marcadores(self)
-
-        ################################################################################  
         self.limpiar_campos()
         self.root.destroy()
     def limpiar_campos(self):

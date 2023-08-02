@@ -77,19 +77,4 @@ class DestinoCulinario:
         #with open(file_path, 'w') as file:
         with open("data/ubicaciones.json", 'w') as file:
              json.dump(data, file, indent=4)
-
         
-        # Guarda los datos en local.json
-        # file_path_2 = r'F:\Cosas\Cristian\Microsoft VS Code Trabajos\Proyecto-Final-Python\Final_ProYect_Inc\Data\locales.json'
-
-        # if os.path.exists(file_path_2):
-        #     with open(file_path_2, 'r') as file:
-        #         data = json.load(file)
-        # else:
-        #     data = []
-
-        # data.append(datos)
-
-        # with open(file_path_2, 'w') as file:
-        #     json.dump(data, file, indent=4)
-
