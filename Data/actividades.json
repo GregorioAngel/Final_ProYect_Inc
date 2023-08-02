@@ -1,0 +1,57 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Festival de la Empanada - Hora de inicio: 14:00 pm",
+        "id_DestinoCulinario" : 1 ,
+        "hora_inicio" : "2023-07-29T15:30:00"
+    },
+
+    {
+        "id" : 2,
+        "nombre" : "Festival doma y folkclore - Hora de inicio: 21:00 pm",
+        "id_DestinoCulinario" : 2 ,
+        "hora_inicio" : "2023-07-29T16:00:00"
+    },
+
+    {
+        "id" : 3,
+        "nombre" : "Degustacion de vinos artesanales - Hora de inicio: 19:00 pm",
+        "id_DestinoCulinario" : 3 ,
+        "hora_inicio" : "2023-07-29T13:30:00"
+    },
+
+    {
+        "id" : 4,
+        "nombre" : "Descuento del 50% en habitaciones matrimoniales - Hora de inicio: 8:00 am",
+        "id_DestinoCulinario" : 4 ,
+        "hora_inicio" : "2023-07-29T12:00:00"
+    },
+
+    {
+        "id" : 5,
+        "nombre" : "2 x 1 en Hamburguesas dobles - Hora de inicio: 00:00 am",
+        "id_DestinoCulinario" : 5 ,
+        "hora_inicio" : "2023-07-29T21:30:00"
+    },
+
+    {
+        "id" : 6,
+        "nombre" : "After Office apartir de las 21 Hs - Hora de inicio: 21:00 pm",
+        "id_DestinoCulinario" : 6 ,
+        "hora_inicio" : "2023-07-29T21:00:00"
+    },
+
+    {
+        "id" : 7,
+        "nombre" : "Cerrado por remodelacion hasta el 14/08/23",
+        "id_DestinoCulinario" : 7 ,
+        "hora_inicio" : "2023-07-29T23:00:00"
+    },
+    
+    {
+        "id" : 8,
+        "nombre" : "Festejos por el dia de la carne con bandas en vivo - Hora de inicio: 12:00 am",
+        "id_DestinoCulinario" : 8 ,
+        "hora_inicio" : "2023-07-29T23:00:00"
+    }
+]

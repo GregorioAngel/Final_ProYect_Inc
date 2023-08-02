@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre": "Angel",
+        "apellido": "Acho",
+        "historial_ruta": "historial_ruta"
+    },
+    {
+        "id": 2,
+        "nombre": "Cristian",
+        "apellido": "Gomez",
+        "historial_ruta": "historial_ruta"
+    },
+    {
+        "id": 3,
+        "nombre": "Ivan",
+        "apellido": "Patagua",
+        "historial_ruta": []
+    },
+    {
+        "id": 4,
+        "nombre": "Diego",
+        "apellido": "Cejas",
+        "historial_ruta": []
+    }
+
+]
