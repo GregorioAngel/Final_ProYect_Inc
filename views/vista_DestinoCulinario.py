@@ -4,9 +4,9 @@ import tkinter as tk
 from tkinter import messagebox
 from models.DestinoCulinario import DestinoCulinario
 from models.local import Local
-from models.ubicacion_culinaria import Ubicacion_Culinaria
-from controller.controlador_principal import ControladorPrincipal
-from views.vista_principal import VistaPrincipal
+#from models.ubicacion_culinaria import Ubicacion_Culinaria
+#from controller.controlador_principal import ControladorPrincipal
+#from views.vista_principal import VistaPrincipal
 
 class VisitasCulinarias:
     def __init__(self):

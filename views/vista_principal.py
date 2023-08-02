@@ -6,6 +6,7 @@ from tkintermapview import TkinterMapView
 #from PIL import Image, ImageTk
 from models.usuario import Usuario
 import json
+from views.vista_DestinoCulinario import VisitasCulinarias
 
 class VistaPrincipal:
     def __init__(self, root, seleccionar_local_callback=None, seleccionar_DestinoCulinario_callback=None):
@@ -16,8 +17,8 @@ class VistaPrincipal:
         #comienza dibujo pantalla
         self.frame_top = tk.Frame(self.root, padx=5, pady=1)
         self.frame_top.pack(side='top', fill='x')
-        titulo = tk.Label(self.frame_top, text="Food Travel", font=("Wide Latin", 20))
-        titulo.pack(side='left', padx=20)
+        titulo = tk.Label(self.frame_top, text="Welcome to Food Travel", font=("Wide Latin", 23))
+        titulo.pack(pady=40 , padx=20)
 
         self.frame_locales = tk.Frame(self.root, width=400, height=300)
         self.frame_locales.pack(side='left', fill='both', expand=False, padx=10, pady=0)
@@ -35,6 +36,15 @@ class VistaPrincipal:
         self.lista_locales = tk.Listbox(self.frame_locales)
         self.lista_locales.bind('<<ListboxSelect>>', seleccionar_local_callback)
         self.lista_locales.pack(fill='both', expand=True)
+        # Crear un frame para centrar el botón y una etiqueta de bienvenida
+        frame_centro = tk.Frame(self.root)
+        frame_centro.pack(expand=True, fill=tk.BOTH)
+
+        label_bienvenida= tk.Label(frame_centro, text="Bienvenido a nuestra App Culinaria", font=("Arial", 16))
+        label_bienvenida.pack(pady=30)
+
+        boton_abrir_visitas_culinarias = tk.Button(frame_centro, text="Visitas Culinarias", command=VisitasCulinarias)
+        boton_abrir_visitas_culinarias.pack(pady=50)
 
     def agregar_local(self, local):
         nombre = local.nombre
@@ -42,78 +52,4 @@ class VistaPrincipal:
 
     def agregar_marcador_mapa(self, latitud, longitud, texto, imagen=None):
         return self.mapa.set_marker(latitud, longitud, text=texto, image=imagen, command=self.seleccionar_DestinoCulinario_callback)
-
-
-
-
-
-"""        r_frame = tk.LabelFrame(self.frame_top, text="Ingrese Usuario")
-        r_frame.pack(side='right', fill='y')
-
-        # Crear un frame para agrupar los entrys y el botón horizontalmente
-        entry_boton_frame = tk.Frame(r_frame)
-        entry_boton_frame.pack(padx=10, pady=5)
-
-        label = tk.Label(entry_boton_frame, text="Nombre", font=("Arial", 11))
-        label.pack(side='left', pady=1)
-        self.nombre = tk.Entry(entry_boton_frame)
-        self.nombre.pack(fill='x', side='left', padx=5, pady=5)
-
-        label2 = tk.Label(entry_boton_frame, text="Apellido", font=("Arial", 11))
-        label2.pack(side='left', pady=1)
-        self.apellido = tk.Entry(entry_boton_frame)
-        self.apellido.pack(fill='x', side='left', padx=5, pady=5)
-
-        # Agregar el botón "Ingresar"
-        boton_ingresar = tk.Button(r_frame, text="   I n g r e s a r   " , command=self.guarda_usuario)
-        boton_ingresar.pack(side='right', padx=30, pady=5)
-
-
-    def guarda_usuario(self):
-        ##################################################
-        # Solo obtenemos los campos necesarios del formulario
-        # Creamos un objeto Local con los datos capturados
-        self.usuarios = Usuario.cargar_usuarios("data/usuarios.json")
-        nrousuarios = len(self.usuarios)
-
-        id_ = nrousuarios
-        nombre_ = self.nombre.get()
-        apellido_ = self.apellido.get()
-        historial_ruta_=[]
-        usuario_=Usuario(id_, nombre_, apellido_, historial_ruta_)
-        guardar = "N"
-        for i in range(len(self.usuarios)):
-            if self.usuarios[i].nombre == nombre_ and self.usuarios[i].apellido == apellido_:
-               # messagebox.showinfo("Usuario encontrado")        
-                break
-            else:
-                guardar = "S"
-
-        if guardar == "S":
-             # Guardamos los datos en locales.json
-             with open("data/usuarios.json", "r") as archivo:
-                  datos_locales = json.load(archivo)
-
-             datos_locales.append(json.loads(usuario_.a_json()))
-
-             with open("data/usuarios.json", "w") as archivo:
-                 json.dump(datos_locales, archivo, indent=4)
-
-             # Busca la ubicación correspondiente al local seleccionado
-        
-             messagebox.showinfo("Guardado", "Los datos del usuario fueron registrados.")
- 
-        self.apellido.delete(0, tk.END)
-        self.nombre.delete(0, tk.END)
-
-        #frame_centro = tk.Frame(self.root)
-        #frame_centro.pack(expand=True, fill=tk.BOTH)
-        label_usuario= tk.Label(self.root, text=nombre_+" "+apellido_, font=("Arial", 16))
-        label_usuario.pack(pady=200)
-        #etiqueta = tk.Label(ventana, text="")
-        label_usuario.place(x=800, y=60)
-     
-    #####################################################
-"""
-
 

@@ -1,0 +1,57 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Festival de la Empanada",
+        "id_DestinoCulinario" : 1 ,
+        "hora_inicio" : "2023-07-29T15:30:00"
+    },
+
+    {
+        "id" : 2,
+        "nombre" : "Festival doma y folkclore",
+        "id_DestinoCulinario" : 2 ,
+        "hora_inicio" : "2023-07-29T16:00:00"
+    },
+
+    {
+        "id" : 3,
+        "nombre" : "Degustacion de vinos artesanales",
+        "id_DestinoCulinario" : 3 ,
+        "hora_inicio" : "2023-07-29T13:30:00"
+    },
+
+    {
+        "id" : 4,
+        "nombre" : "Descuento del 50% en habitaciones matrimoniales",
+        "id_DestinoCulinario" : 4 ,
+        "hora_inicio" : "2023-07-29T12:00:00"
+    },
+
+    {
+        "id" : 5,
+        "nombre" : "2 x 1 en Hamburguesas dobles",
+        "id_DestinoCulinario" : 5 ,
+        "hora_inicio" : "2023-07-29T21:30:00"
+    },
+
+    {
+        "id" : 6,
+        "nombre" : "Regalos y descuentos por nuestro decimo aniversario",
+        "id_DestinoCulinario" : 6 ,
+        "hora_inicio" : "2023-07-29T23:00:00"
+    },
+
+    {
+        "id" : 7,
+        "nombre" : "Cerrado por remodelacion.",
+        "id_DestinoCulinario" : 7 ,
+        "hora_inicio" : "2023-07-29T23:00:00"
+    },
+    
+    {
+        "id" : 8,
+        "nombre" : "Festejos por el dia de la carne con bandas en vivo.",
+        "id_DestinoCulinario" : 8 ,
+        "hora_inicio" : "2023-07-29T23:00:00"
+    }
+]

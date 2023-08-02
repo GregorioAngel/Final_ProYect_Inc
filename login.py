@@ -10,12 +10,6 @@ from controller.controlador_principal import ControladorPrincipal
 ctk.set_appearance_mode("Sytem")
 ctk.set_default_color_theme("blue")
 
-# ---> Rutas
-# Carpeta principal del proyecto
-carpeta_principal = os.path.dirname(__file__)
-# Carpeta de imágenes
-carpeta_imagenes = os.path.join(carpeta_principal, "imagenes")
-
 # Ventana de Login
 class Login:
     def __init__(self):
@@ -32,13 +26,9 @@ class Login:
             dark_image=Image.open("views/images/FT.png"), # Imagen modo oscuro
             size=(250, 250)) # Tamaño de las imágenes
 
-        #logo = ImageTk.PhotoImage(Image.open(os.path.join(carpeta_imagenes, "logo.png")))
-        #ctk.Label(self.root, image=logo).pack()
-
         etiqueta = ctk.CTkLabel(master=self.root, image=logo, text="")
         etiqueta.pack(pady=15)
 
-        # Campos de texto
         # Usuario
         ctk.CTkLabel(self.root, text="Usuario").pack()
         self.usuario = ctk.CTkEntry(self.root)
@@ -60,17 +50,12 @@ class Login:
   
     # Función para validar el login
     def validar(self):
-        #obtener_usuario = self.usuario.get() # Obtenemos el nombre de usuario
-        #obtener_contrasena = self.contrasena.get() # Obtenemos la contraseña
-        print("validar")
         self.usuarios = Usuario.cargar_usuarios("data/usuarios.json")
         nrousuarios = len(self.usuarios) 
         id_ = nrousuarios
         nombre_ = self.usuario.get()
         apellido_ = self.contrasena.get()
         historial_ruta_=[]
-        #usuario_=Usuario(id_, nombre_, apellido_, historial_ruta_)
-        #guardar = "N"
         for i in range(len(self.usuarios)):
             if self.usuarios[i].nombre == nombre_ and self.usuarios[i].apellido == apellido_:
                 if hasattr(self, "info_login"):
@@ -90,30 +75,6 @@ class Login:
                self.info_login = ctk.CTkLabel(self.root, text="Usuario o contraseña incorrectos.")
                self.info_login.pack()
 
-
-"""
-        # Verifica si el valor que tiene el usuario o la contraseña o ambos no coinciden
-        if obtener_usuario != acceso_bd["user"] or obtener_contrasena != acceso_bd["password"]:
-            # En caso de tener ya un elemento "info_login" (etiqueta) creado, lo borra
-            if hasattr(self, "info_login"):
-                self.info_login.destroy()
-            # Crea esta etiqueta siempre que el login sea incorrecto
-            self.info_login = ctk.CTkLabel(self.root, text="Usuario o contraseña incorrectos.")
-            self.info_login.pack()
-        else:
-            # En caso de tener ya un elemento "info_login" (etiqueta) creado, lo borra
-            if hasattr(self, "info_login"):
-                self.info_login.destroy()
-            # Crea esta etiqueta siempre que el login sea correcto
-            self. info_login = ctk.CTkLabel(self.root, text=f"Hola, {obtener_usuario}. Espere unos instantes...")
-            self.info_login.pack()
-            # Se destruye la ventana de login
-            self.root.destroy()
-            # Se instancia la ventana de opciones
-            ventana_opciones = VentanaOpciones()
-"""
-
-
 class Ventana_Principal:
 
      def __init__(self):
@@ -123,5 +84,3 @@ class Ventana_Principal:
         self.root.iconbitmap("views/images/FT.ico")
         controlador = ControladorPrincipal(self.root)
         self.root.mainloop()
-
-#ventana_login = Login()        
