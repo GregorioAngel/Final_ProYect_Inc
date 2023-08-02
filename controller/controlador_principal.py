@@ -20,6 +20,7 @@ class ControladorPrincipal:
         self.cargar_marcadores()
         print(f"Nro de Ubicación {nroubicaciones}" )
 
+            
     def cargar_locales(self):
         for local in self.locales:
             self.vista.agregar_local(local)
